@@ -21,9 +21,14 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #90caf9;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: -webkit-linear-gradient(bottom, #f8f6f1, #b7a997);
+  background-image: linear-gradient(to bottom, #f8f6f1, #b7a997);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .link-list {
@@ -32,16 +37,41 @@ h1 {
 }
 
 .link-list li {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .link-list a {
   text-decoration: none;
-  color: #bb86fc;
-  font-size: 1.1rem;
+  /* color: #bb86fc; */
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   transition: color 0.3s;
+}
+
+.link-list a::after {
+  content: "➤";
+  font-size: 1rem;
+  margin-left: auto;
+  color: #888;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.link-list a:hover::after {
+  transform: translateX(4px);
+  color: #fff;
 }
 
 .link-list a:hover {
   color: #ffffff;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  vertical-align: middle;
 }
